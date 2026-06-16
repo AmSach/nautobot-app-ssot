@@ -104,7 +104,7 @@ class InfobloxDataSource(DataSource):  # pylint: disable=too-many-instance-attri
             raise ValueError("Config not enabled for sync to Nautobot.")
         self.memory_profiling = kwargs.get("memory_profiling")
         self.parallel_loading = kwargs.get("parallel_loading")
-        super().run(dryrun=self.dryrun, memory_profiling=self.memory_profiling, *args, **kwargs)
+        super().run(*args, **kwargs)
 
 
 class InfobloxDataTarget(DataTarget):  # pylint: disable=too-many-instance-attributes
